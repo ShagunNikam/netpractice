@@ -1,0 +1,62 @@
+.register_container{
+	width: 70%;
+	margin: 50px auto;
+	padding: 20px;
+	border: 1px solid #ddd;
+    background-clip: padding-box;
+	box-shadow: 0 3px 9px rgba(0,0,0,.5);
+	background-color: #fff;
+	border-radius: 6px;
+
+	.register_logo{
+		width: 100%;
+		display: flex;
+		justify-content:  center;
+		padding-bottom: 30px;
+	}
+
+	.register_mainform__wrapper{
+		.register_practice_wrapper{
+			.form_title{
+				font-size: 17px;
+				color: #FF9800;
+				padding-bottom: 5px;
+				border-bottom: 1px solid #FF9800;
+			}
+			.register_form{
+				margin: 40px 0 20px 0;
+				.register_form_wrap{
+					display: flex;
+					flex-wrap: wrap;
+
+					.inline_form{
+						width: 25%;
+						padding: 0 10px;
+					}
+				}
+
+				.submitform__wrapper{
+					display: flex;
+					justify-content: space-between;
+
+					.save_btn__wrapper{
+						.btn{
+							margin: 0 10px;
+							font-size: 14px;
+							color: #fff;
+
+							&.save_btn {
+								background: #3498db;
+								border: 1px solid #3498db; 
+							}
+							&.cancel_btn {
+								background: #404041;
+								border: 1px solid #404041; 
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

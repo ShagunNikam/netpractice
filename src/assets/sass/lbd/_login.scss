@@ -1,0 +1,57 @@
+.login_container {
+	width: 30%;
+	margin: 100px auto 100px;
+	border: 1px solid #ddd;
+	padding: 20px 0;
+	background: #fff;
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+
+	.login_logo__wrapper{
+		display: flex;
+		margin-bottom: 22px;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #ddd;
+		padding: 0 20px 20px;
+
+		.signup_btn__wrapper{
+			.signup__btn {
+				background: #00bca4;
+				border: 1px solid #00bca4;
+				color: #fff;
+				font-size: 12px;
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.login_form__wrapper{
+		padding: 0 20px;
+			
+		.login_btn{
+			button {
+				width: 100%;
+				text-transform: uppercase;
+				background: #5cb85c;
+				color: #fff;
+				border: 1px solid #5cb85c;
+				font-size: 14px;
+		    font-weight: 700;
+		    line-height: 1.42857143;
+		    text-align: center;
+		    cursor: pointer;
+			}
+		}
+
+		.login_forget__link{
+			padding-bottom: 10px;
+			a{
+				color: #8da0aa;
+	    	font-size: 13px;
+	    	text-decoration: none;
+			}
+		}
+	}	
+}
+

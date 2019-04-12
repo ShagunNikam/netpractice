@@ -1,0 +1,146 @@
+.group { 
+	position:relative; 
+	margin-bottom:30px; 
+}
+
+input {
+	font-size:$font-size-large;
+	padding:7px 10px 7px 5px;
+	display:block;
+	width:100%;
+	border:none;
+	border-bottom:1px solid #ddd;
+	background: transparent;
+}
+input:focus {
+	outline:none; 
+}
+
+
+label {
+	color:#999; 
+	font-size:$font-size-medium;
+	font-weight:normal;
+	margin: 0 !important;
+	position:absolute;
+	pointer-events:none;
+	left:5px;
+	top:15px;
+	transition:0.2s ease all; 
+	-moz-transition:0.2s ease all; 
+	-webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label {
+	top:-7px;
+	font-size:12px;
+	color:#5cb85c;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+	position:relative;
+	display:block;
+	width:100%;
+}
+.bar:before, .bar:after {
+	content:'';
+	height:1px; 
+	width:0;
+	bottom:1px; 
+	position:absolute;
+	background:#5cb85c; 
+	transition:0.2s ease all; 
+	-moz-transition:0.2s ease all; 
+	-webkit-transition:0.2s ease all;
+}
+.bar:before {
+	left:50%;
+}
+.bar:after {
+	right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+	width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+	position:absolute;
+	height:60%; 
+	width:100%; 
+	top:25%; 
+	left:0;
+	pointer-events:none;
+	opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+	-webkit-animation:inputHighlighter 0.3s ease;
+	-moz-animation:inputHighlighter 0.3s ease;
+	animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from {
+		background:#5264AE;
+	}
+		to {
+		 width:0;
+		 background:transparent;
+	}
+}
+@-moz-keyframes inputHighlighter {
+	from {
+		background:#5264AE;
+	}
+		to {
+			width:0;
+			background:transparent;
+		}
+}
+@keyframes inputHighlighter {
+	from {
+		background:#5264AE;
+	}
+		to {
+			width:0;
+			background:transparent;
+		}
+}
+
+/* Select css */
+
+.custom_select {
+	width: 100%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	height: 40px;
+	padding: 16px 38px 5px 5px;
+	background: transparent; 
+	background-size: 10px;
+	transition: border-color .1s ease-in-out,box-shadow .1s ease-in-out;
+	border-radius: 3px;
+	border-bottom: 1px solid #ddd;
+	border-right: 0;
+	border-left: 0;
+	border-top: 0;
+	border-radius: 0;
+	color: #888;
+    font-size: 16px;
+}
+
+.custom_select:focus {
+	outline: none;
+}
+
+/* remove default arrow in IE */
+select::-ms-expand {
+	display:none;
+}
